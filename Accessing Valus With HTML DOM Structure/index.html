@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing Values with HTML DOM</title>
+    <script>
+        function greetUser() {
+            // Access the input value using DOM
+            const name = document.getElementById("nameInput").value;
+
+            // Create a greeting message
+            const greetingMessage = `Hello, ${name}! Welcome!`;
+
+            // Access the output element and update its text
+            document.getElementById("greetingOutput").innerText = greetingMessage;
+        }
+    </script>
+</head>
+<body>
+    <h1>Greeting Form</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="greetUser()">Greet Me!</button>
+    <p id="greetingOutput"></p>
+</body>
+</html>
